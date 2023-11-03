@@ -89,7 +89,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izX-Ib-Rpp">
                                 <rect key="frame" x="155" y="373.5" width="104" height="34.5"/>
-                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="AGREGAR">
                                     <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="17"/>
@@ -99,24 +99,38 @@
                                     <action selector="agregarTapped:" destination="PAP-jf-s0f" eventType="touchUpInside" id="8jc-Zi-sPQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiempo:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hjg-hf-Slp">
+                                <rect key="frame" x="169" y="458" width="76.5" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UmF-HC-tyK">
+                                <rect key="frame" x="48" y="520" width="318" height="31"/>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RQ4-pW-h0F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Trb-un-2tP" firstAttribute="centerX" secondItem="o8e-j1-kum" secondAttribute="centerX" id="1yo-7z-m6v"/>
                             <constraint firstItem="izX-Ib-Rpp" firstAttribute="centerX" secondItem="o8e-j1-kum" secondAttribute="centerX" id="8Ju-Ku-Nbu"/>
+                            <constraint firstItem="Hjg-hf-Slp" firstAttribute="top" secondItem="izX-Ib-Rpp" secondAttribute="bottom" constant="50" id="8ur-pT-85L"/>
                             <constraint firstItem="E38-WH-1B1" firstAttribute="centerX" secondItem="o8e-j1-kum" secondAttribute="centerX" id="BRg-33-Kn5"/>
                             <constraint firstItem="E38-WH-1B1" firstAttribute="top" secondItem="545-cF-1E9" secondAttribute="bottom" constant="30" id="Czc-Eg-yKY"/>
                             <constraint firstItem="OlN-qd-QK6" firstAttribute="centerX" secondItem="o8e-j1-kum" secondAttribute="centerX" id="EMy-hv-9oI"/>
                             <constraint firstItem="545-cF-1E9" firstAttribute="centerX" secondItem="o8e-j1-kum" secondAttribute="centerX" id="IY0-VG-01x"/>
+                            <constraint firstItem="UmF-HC-tyK" firstAttribute="top" secondItem="Hjg-hf-Slp" secondAttribute="bottom" constant="38" id="LNU-Dy-lJk"/>
                             <constraint firstItem="izX-Ib-Rpp" firstAttribute="top" secondItem="OlN-qd-QK6" secondAttribute="bottom" constant="20" id="Php-E0-Z70"/>
                             <constraint firstItem="RQ4-pW-h0F" firstAttribute="trailing" secondItem="OlN-qd-QK6" secondAttribute="trailing" constant="20" id="SKD-nA-j0z"/>
+                            <constraint firstItem="Hjg-hf-Slp" firstAttribute="centerX" secondItem="o8e-j1-kum" secondAttribute="centerX" id="U1G-n1-C19"/>
+                            <constraint firstItem="RQ4-pW-h0F" firstAttribute="trailing" secondItem="UmF-HC-tyK" secondAttribute="trailing" constant="50" id="Uru-Jc-lkZ"/>
                             <constraint firstItem="OlN-qd-QK6" firstAttribute="top" secondItem="E38-WH-1B1" secondAttribute="bottom" constant="20" id="Zrw-xu-LGQ"/>
                             <constraint firstItem="Trb-un-2tP" firstAttribute="top" secondItem="RQ4-pW-h0F" secondAttribute="top" constant="20" id="aLw-r1-ing"/>
                             <constraint firstItem="OlN-qd-QK6" firstAttribute="leading" secondItem="RQ4-pW-h0F" secondAttribute="leading" constant="20" id="aXc-n1-mrk"/>
                             <constraint firstItem="RQ4-pW-h0F" firstAttribute="trailing" secondItem="E38-WH-1B1" secondAttribute="trailing" constant="20" id="bLV-bq-6FU"/>
                             <constraint firstItem="545-cF-1E9" firstAttribute="top" secondItem="Trb-un-2tP" secondAttribute="bottom" constant="20" id="daa-Bo-aiX"/>
                             <constraint firstItem="E38-WH-1B1" firstAttribute="leading" secondItem="RQ4-pW-h0F" secondAttribute="leading" constant="20" id="kQa-h8-i4W"/>
+                            <constraint firstItem="UmF-HC-tyK" firstAttribute="leading" secondItem="RQ4-pW-h0F" secondAttribute="leading" constant="50" id="nca-rb-1Sj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QJu-cc-iyv"/>
@@ -125,6 +139,8 @@
                         <outlet property="grabarButton" destination="Trb-un-2tP" id="HfP-tj-cYh"/>
                         <outlet property="nombreTextField" destination="OlN-qd-QK6" id="ZZB-kg-ZK1"/>
                         <outlet property="reproducirButton" destination="545-cF-1E9" id="Phc-sK-KzE"/>
+                        <outlet property="tiempoG" destination="Hjg-hf-Slp" id="le9-Pu-3YV"/>
+                        <outlet property="volumeSlider" destination="UmF-HC-tyK" id="Kzh-K7-hxm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GIe-dD-b2D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -153,11 +169,17 @@
     <resources>
         <image name="grabar" width="50" height="50"/>
         <image name="reproducir" width="50" height="50"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
